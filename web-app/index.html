@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="text/javascript" src="assets/js/index.js"></script>
+</head>
+<body>
+
+    <h1 id="pageTitle">Welcome to Search-n-Sketch!</h1>
+
+    <input type="text" id="searchBox" />
+    <button id="searchBtn">SEARCH</button>
+
+    <div class="container" id="results">
+        <template id="photo-result-template">
+            <div class="photo-card">
+                <a class="photo-link" href="" target="_blank"><img class="photo" src="" class="thumbnail"/></a>
+                <div class="card-bottom">
+                    <span>Photo by: <a class="credit" target="_blank"></a></span>
+                    <a class="image-link" target="_blank"><img class="profile-image" src=""/></a>
+                </div>
+            </div>
+        </template>
+        <!-- photo cards will get generated here -->
+    </div>
+    
+</body>
+</html>

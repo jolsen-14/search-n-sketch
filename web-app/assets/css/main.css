@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2d2d4e;
+    text-align: center;
+}
+
+#pageTitle {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.credit {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.photo {
+    width: 400px;
+    height: 430px;
+    object-fit: cover;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    border: solid #2d2d4e 1px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.6), 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 50px;
+}
+
+.photo-card {
+    background-color: #cecee3;
+    height: 520px;
+    width: 404px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-family: sans-serif;
+  }
+
+  .photo-card:hover {
+    background-color: #6d6dab;
+  }
+
+  .card-bottom {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(247, 247, 247);
+      padding: 10px;
+      border: solid #2d2d4e .2px;
+      border-radius: 5px;
+  }
