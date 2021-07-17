@@ -1,5 +1,7 @@
+const apiKey = config.MY_UNSPLASH_KEY;
+
 const unsplashURL = 'https://api.unsplash.com/search/photos'+ 
-'?client_id=x' +
+'?client_id=' + apiKey +
 '&per_page=25' +
 '&query='
 
@@ -10,9 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsContainer = document.getElementById('results');
 
     searchBtn.addEventListener('click', () => {
-        console.log("I was clicked")
         const searchTerm = inputBox.value;
-        console.log(searchTerm)
         fetch(unsplashURL + searchTerm)
         .then((httpResponse) => {
             return httpResponse.json();
