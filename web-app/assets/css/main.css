@@ -1,6 +1,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #2d2d4e;
+}
+
+header {
     text-align: center;
 }
 
@@ -15,13 +18,13 @@ body {
 }
 
 .credit {
-    text-align: center;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
 .photo {
+    position: relative;
     width: 400px;
     height: 430px;
     object-fit: cover;
@@ -43,20 +46,96 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     padding: 20px 15px;
     margin: 10px;
-    text-align: center;
     border-radius: 4px;
     font-family: sans-serif;
-  }
+}
 
-  .photo-card:hover {
+.photo-card.selected {
+    box-shadow: inset 0 0 60px #ffff33, 0 4px 8px 0 rgba(255, 255, 255, 0.6), 0 6px 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.photo-card:hover {
     background-color: #6d6dab;
-  }
+}
 
-  .card-bottom {
-      display: flex;
-      justify-content: space-between;
-      background-color: rgb(247, 247, 247);
-      padding: 10px;
-      border: solid #2d2d4e .2px;
-      border-radius: 5px;
-  }
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(247, 247, 247, .5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card-top {
+    position: relative;
+}
+
+.card-metadata {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.full-screen-image {
+    position: fixed;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 998;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    animation: fade .2s linear;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.full-screen-close-button {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+    z-index: 999;
+    animation: fade .2s linear;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.full-screen-close-button:hover {
+    cursor: pointer;
+}
+
+.full-screen-blur {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 990;
+    backdrop-filter: blur(10px);
+    animation: fade .2s linear;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+@keyframes fade {
+0% { opacity: 0 }
+100% { opacity: 1 }
+}
+
+.zoom-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    z-index: 2;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.zoom-icon:hover {
+    cursor: zoom-in;
+}

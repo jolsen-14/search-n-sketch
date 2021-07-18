@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <script type='text/javascript' src='./config.js'></script>
     <script type="text/javascript" src="assets/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d94da5de57.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <h1 id="pageTitle">Welcome to Search-n-Sketch!</h1>
 
-    <h1 id="pageTitle">Welcome to Search-n-Sketch!</h1>
-
-    <input type="text" id="searchBox" />
-    <button id="searchBtn">SEARCH</button>
+        <input type="text" id="searchBox" placeholder="Enter search term"/>
+        <button id="searchBtn" class="fas fa-search"></button>
+    </header>
 
     <div class="container" id="results">
         <template id="photo-result-template">
-            <div class="photo-card">
-                <a class="photo-link" href="" target="_blank"><img class="photo" src="" class="thumbnail"/></a>
+            <div class="photo-card" id="">
+                <div class="card-top">
+                    <a class="photo-link" href="" target="_blank">
+                        <img class="photo" id="" src="" class="thumbnail"/>
+                    </a>
+                    <i class="zoom-icon fas fa-search-plus" id=""></i>
+                </div>
                 <div class="card-bottom">
-                    <span>Photo by: <a class="credit" target="_blank"></a></span>
+                    <div class="card-metadata">
+                        <span>Photo by: <a class="credit" target="_blank"></a></span>
+                        <div>
+                            <input class="reference-set-selector" type="checkbox" id="" name="" value="">
+                            <label class="reference-set-selector-label" for="">Include in reference set</label>
+                        </div>
+                    </div>
                     <a class="image-link" target="_blank"><img class="profile-image" src=""/></a>
                 </div>
             </div>
