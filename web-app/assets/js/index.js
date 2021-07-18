@@ -1,8 +1,11 @@
 const apiKey = config.MY_UNSPLASH_KEY;
 
+let pageNum = 2;
+
 const unsplashURL = 'https://api.unsplash.com/search/photos'+ 
 '?client_id=' + apiKey +
-'&per_page=25' +
+'&per_page=25' + 
+'&page=' + pageNum +
 '&query='
 
 const resultsArray = [];
