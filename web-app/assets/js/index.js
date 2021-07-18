@@ -1,6 +1,6 @@
 const apiKey = config.MY_UNSPLASH_KEY;
 
-let pageNum = 2;
+let pageNum = 1;
 
 const unsplashURL = 'https://api.unsplash.com/search/photos'+ 
 '?client_id=' + apiKey +
