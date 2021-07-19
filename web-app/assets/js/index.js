@@ -20,8 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsContainer = document.getElementById('results');
 
     searchBtn.addEventListener('click', () => {
+        doSearch();
+    });
+
+    searchBox.addEventListener(('keypress'), (event) => {
+        if (event.key === 'Enter') {
+            doSearch();
+        }
+    })
+
+    function doSearch() {
         resultsArray.length = 0; // clear the original resultsArray
-        referenceSetArray.length = 0;
+        referenceSetArray.length = 0; // clear the referenceSetArray
         const searchTerm = inputBox.value;
         fetch(unsplashURL + searchTerm)
         .then((httpResponse) => {
@@ -41,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Your browser does not support templates');
             }
         })
-    });
+    }
 
     function buildPhotoCard(photo) {
         resultsArray.push(photo);
